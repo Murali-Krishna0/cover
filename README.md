@@ -31,100 +31,160 @@ Insert the images in their appropriate places.
 Publish the website in the LocalHost.
 
 ## PROGRAM:
-HTML:
 ```
-{% load static %}
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Web Development Technologies</title>
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    </head>
-    <body>
-        <section class="book">
-            <br><br>
-        <span id="top">EXPERT INSIGHT &nbsp;&nbsp;&nbsp;</span>
-            <h1>Responsive Web Design with HTML5 and CSS</h1>
-            <h4>Develop future-proof responsive websites using the latest HTML5 and CSS techniques</h4>
-            <h3>Third Edition</h3>
-            <footer>
-                <div id="HASH" class="blue-msg">
-                    <span>Ben Frain</span>
-                    <span id="end"><u>Packt></u></span>
-                </div>
-            </footer>
-    </section>
-    </body>
+<html>
+
+<head>
+    <title>BOOK COVER</title>
+    <style>
+        .bookpage{
+
+            width: 400px;
+            height: 600px;
+            color:black;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            font-family: ' Arial, sans-serif';
+            background-image: url(8go81z8i93s91.jpg);
+            background-size: cover;
+        }
+            
+        
+        .insight{
+            color:rgb(0, 0, 0);
+        
+        }
+        
+        
+        .hrstyle{
+            width:100px;
+        }
+        .author{
+        
+            display: inline;
+            position: relative;
+            color:rgb(0, 0, 0);
+            top:190px;
+            
+            font-family:Georgia;
+            font-size: medium;
+        }
+        .booktitle{
+            color:rgb(0, 0, 0);
+            font-family: Roquen;
+            font-size: larger;
+            text-align: center;
+            position: relative;
+            top: 30px;
+        
+        }
+        .id {
+            width:400px;
+            position: relative;
+            top:180px;
+            
+        }
+        .pub{
+            color:rgb(0, 0, 0);
+            font-size: medium;
+            position: relative;
+            top:155px;
+            left:330px;
+        }
+        .ed{
+            color:rgb(0, 0, 0);
+            font-size: medium;
+            font-family: Verdana;
+            position:relative;
+            top:85px;
+        
+        }
+        .subtitle{
+            color:rgb(0, 0, 0);
+            font-family:unicorn;
+            font-size: large;
+            position: relative;
+            top:40px;
+            text-align: center;
+        }
+        .myphoto {
+            position: relative;
+            margin-top: 20px; /* Adjust the margin-top to position the image below the subtitle */
+            margin-left: auto;
+            margin-right: auto;
+            left: 140px;
+            top: 185px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .myphoto img {
+            width: 100%;
+            height: 120%;
+            object-fit: cover;
+        }
+        </style>
+        <title>Book Cover Page</title>
+        </head>
+        <body>
+        <div class="bookpage">
+            <div class="insight">
+                TRAVELLER
+            </div>
+            <div class="hrstyle">
+                <hr style="color:blanchedalmond">
+            </div>
+            <div class="booktitle">
+                <h1>"The Complete Poems of Emily Dickinson"</h1></div>
+            <div class="subtitle">
+                Read the book and share your pleasure
+            </div>
+            <div class="subtitle">
+                 
+            </div>
+            
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="myphoto">
+                <img src="c:\Users\admin\Pictures\WhatsApp Image 2024-01-09 at 21.26.03_7aea8f7c.jpg" width="120" height="120" >
+           
+            </div>
+            <div class="id">
+                <hr style="color:rgb(0, 0, 0)">
+            </div>
+            <div class="author">
+               <p><b>FIRST EDITION </b></p>
+            </div>
+            <div class="pub">
+                SEC
+            </div>
+            <div class="ed">
+                <b>MURALI KRISHNA S</b>
+            </div>
+        </div>
+        </body>
+        
+
 </html>
 ```
-CSS:
-```
-body{
-    color:rgb(255, 255, 255);
-    font-family: Helvetica, sans-serif;
-    background-color: #333
-}
 
-.book{
-    width: 726px;
-    height:891px;
-    background-color:rgb(0, 0, 0);
-    margin:auto;
-    position: relative;
-    background-image: url('https://th.bing.com/th/id/R.671f161d141466cdcf83db28cb0f3a9c?rik=chK%2bVFNfy9d5yQ&riu=http%3a%2f%2fwww.textronic.com%2fblog%2fwp-content%2fuploads%2f2017%2f10%2fJARVIS.png&ehk=ZeD47puFibIuEgnTFLJ0EvR0pvMX2F4jcL4rRn2y4EU%3d&risl=1&pid=ImgRaw&r=0');
-    background-repeat: no-repeat;
-    background-size:606px;
-    background-position: bottom 150px center;
-}
-h1{
-    font-size:70px;
-    margin:60px;
-    margin-bottom:0px;
-}
-h3{
-    margin:0px 0px 90px 60px;
-    position: absolute;
-    bottom:0px;
-    font-size: x-large;
-    color: #f47027;
-}
-h4{
-    font-size:20px;
-    margin:60px;
-   margin-top:10px;
-   width:430px;
-}
-#top{
-    border-bottom:2px solid #f47027;
-    padding:100px 0px 5px 30px;
-}
-footer{
-    position: absolute;
-    bottom: 0px;
-    border-top:2px solid #f47027;
-    padding-top:10px;
-    width:726px;
-}
-#HASH {
-    display: flex;
-    justify-content: space-between;
-}
-  #HASH span{
-    margin:10px 0px 20px 60px;
-    font-size: xx-large;
-    font-weight: bold;
-  }
-  #end{
-    padding-right:60px;
-  }
-```
 
 
 ## OUTPUT:
-![Screenshot 2024-05-05 111740](https://github.com/Murali-Krishna0/cover/assets/149054535/aea7126d-f093-47dd-9df9-56ed948340cb)
-![Screenshot 2024-05-05 111750](https://github.com/Murali-Krishna0/cover/assets/149054535/83ee915e-fbd9-43a0-b093-086a1c8e3121)
-![Screenshot 2024-05-05 112011](https://github.com/Murali-Krishna0/cover/assets/149054535/73bdf92c-6f7a-400a-b844-b2194d79a10c)
+![Screenshot 2024-05-05 113959](https://github.com/Murali-Krishna0/cover/assets/149054535/bd360e1c-66da-47f7-92cd-234c779f25a8)
+![Screenshot 2024-05-05 114016](https://github.com/Murali-Krishna0/cover/assets/149054535/5fd05d42-a3bf-4a5b-b6ea-3afc732d0f54)
+![Screenshot 2024-05-05 114030](https://github.com/Murali-Krishna0/cover/assets/149054535/950453ec-24e1-451b-b6e3-8285dec43953)
+![Screenshot 2024-05-05 114040](https://github.com/Murali-Krishna0/cover/assets/149054535/51c9b805-5665-4b0e-9715-6bdae120a963)
+![Screenshot 2024-05-05 114047](https://github.com/Murali-Krishna0/cover/assets/149054535/f08ea20d-903b-416c-a6ed-5acb7c9af358)
+![Screenshot 2024-05-05 113757](https://github.com/Murali-Krishna0/cover/assets/149054535/868ddac7-afc0-4a79-98a7-f033e8cdc7b0)
+
 
 
 ## RESULT:
